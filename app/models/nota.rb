@@ -1,6 +1,8 @@
 class Nota < ApplicationRecord
   searchkick
   include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+  
   validates :titulo, presence: true
   validates :texto, presence: true
 
