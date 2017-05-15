@@ -1,5 +1,6 @@
 class Nota < ApplicationRecord
   searchkick
+  include Elasticsearch::Model
   validates :titulo, presence: true
   validates :texto, presence: true
 
