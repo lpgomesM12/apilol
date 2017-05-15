@@ -14,6 +14,7 @@ class Api::V1::NotasController < Api::V1::ApplicationController
    @nota.date_visualizacao ||= Time.now
    @nota.cont_visualizacao += 1
    @nota.save
+   @nota
  end
 
  def create
