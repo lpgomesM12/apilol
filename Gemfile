@@ -11,6 +11,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'searchkick'
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
