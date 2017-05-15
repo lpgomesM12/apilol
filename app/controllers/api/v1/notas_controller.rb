@@ -20,7 +20,7 @@ class Api::V1::NotasController < Api::V1::ApplicationController
  def create
     @nota = Nota.new(nota_params)
     if @nota.save
-      render :json => {msg: "Nota Cadastrada com sucesso!", erro: false}
+      render :json => {msg: "Nota cadastrada com sucesso!", erro: false}
     else
       render :json => {msg: @nota.errors, erro: true} 
     end
@@ -28,10 +28,18 @@ class Api::V1::NotasController < Api::V1::ApplicationController
 
  def update
      if @nota.update(nota_params)
-         render :json => {msg: "Nota Alterada com sucesso!", erro: false }
+         render :json => {msg: "Nota alterada com sucesso!", erro: false }
       else
          render :json => {msg: @nota.errors, erro: true }
       end
+  end
+
+  def destroy
+    if @nota.destroy
+         render :json => {msg: "Nota excluída com sucesso!", erro: false }
+      else
+        render :json => {msg: @nota.errors, erro: true }
+     end 
   end
 
  private
