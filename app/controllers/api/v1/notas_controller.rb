@@ -13,7 +13,7 @@ class Api::V1::NotasController < Api::V1::ApplicationController
  def show
    @nota.date_visualizacao ||= Time.now
    @nota.cont_visualizacao += 1
-   @nota.save
+  #  @nota.save
    @nota
  end
 
