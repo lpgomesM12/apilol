@@ -2,7 +2,6 @@ class Api::V1::NotasController < Api::V1::ApplicationController
   before_action :set_nota, only: [:show, :edit, :update, :destroy]
 
  def index
-  
    if params[:q].present?
       @notas = Nota.search params[:q], fields: [:titulo, :texto]
     else
